@@ -13,3 +13,9 @@ import urlparse #创建绝对路径
    html=urllib2.urlopen(request).read()是读取url
 3、if num_retries>0 是用于遇到下载错误时的重新下载
 4、link_crawer是链接爬虫
+
+从5开始是第一章介绍的高级功能
+5、解析robots.txt文件，以避免下载禁止爬去的url
+6、使用代理
+7、下载限速
+8、避免爬虫陷阱
