@@ -41,7 +41,12 @@ def get_links(html):
     """
     <a href="http://www.w3school.com.cn">W3School</a>
     """
+    """
+    具体的关于正则表达式内容，请留意我的博客
+    """
     webpage_regex=re.compile('<a[^>]+href=["\'](.*?)["\']')
+    
+    # 正则表达式 re findall 方法能够以列表的形式返回能匹配的子串。
     return webpage_regex.findall(html)
 
 link_crawler('http://example.webscraping.com','/(index|view)')
