@@ -1,16 +1,16 @@
-#比较好地理解了正则表达式
-#coding=utf-8
-#正则表达式来抓取数据
+#　coding　=　utf-8
+#　比较好地理解了正则表达式
+#　正则表达式来抓取数据
+# 这里使用代理去访问网站
 import re
 import urllib2
-
-# 这里使用代理去访问网站
 
 def download(url,user_agent='wswp',porxy=None,num_retries=2):
     print 'Downloading:',url
     headers={'User-agent':user_agent}
     request=urllib2.Request(url,headers=headers)
     opener=urllib2.build_opener()   #构造opener
+    
     if porxy:
         proxy_params={urlparse.urlparse(url).scheme:proxy}
         opener.add_handler(urllib2.ProxyHandler(proxy_params))
