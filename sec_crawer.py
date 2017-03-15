@@ -3,6 +3,9 @@
 #正则表达式来抓取数据
 import re
 import urllib2
+
+# 这里使用代理去访问网站
+
 def download(url,user_agent='wswp',porxy=None,num_retries=2):
     print 'Downloading:',url
     headers={'User-agent':user_agent}
