@@ -38,7 +38,9 @@ def link_crawler(seed_url,link_regex):
                     crawl_queue.append(link)
 
 def get_links(html):
-    # 
+    """
+    <a href="http://www.w3school.com.cn">W3School</a>
+    """
     webpage_regex=re.compile('<a[^>]+href=["\'](.*?)["\']')
     return webpage_regex.findall(html)
 
