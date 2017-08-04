@@ -1,4 +1,3 @@
-# -*- coding = UTF-8 -*-
 import re
 import urlparse
 import urllib2

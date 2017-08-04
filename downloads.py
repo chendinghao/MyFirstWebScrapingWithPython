@@ -1,8 +1,8 @@
 # -*- coding = UTF-8 -*-
 # author: Howard
 # num_retries 重试次数       user_agent 用户代理    proxy 也是代理
-import urllib2
-import urlparse
+import urllib2  # 利用不同协议获取url的能力 
+import urlparse # urlparse 主要把 url 拆分成六部分，并以元组的方式返回
 
 def download1(url):
     """simple downloader"""
@@ -51,6 +51,10 @@ def download5(url, user_agent='wswp', proxy=None, num_retries=2):
     print 'Downloading:', url
     headers = {'User-agent': user_agent}
     request = urllib2.Request(url, headers=headers)
+    """
+    urllib2利用一个Request对象来映射提出的ＨＴＴＰ请求，在他最简单的形式中你将用你要请求的地址创建一个Request对象，通过调用urlopen并
+    传入Ｒequest对象，将返回一个相关请求的response对象。
+    """
     opener = urllib2.build_opener()
     if proxy:
         proxy_params = {urlparse.urlparse(url).scheme: proxy}
@@ -66,6 +70,7 @@ def download5(url, user_agent='wswp', proxy=None, num_retries=2):
                 html = download5(url, user_agent, proxy, num_retries-1)
     return html
 
+# download 用于下载网页
 download = download5
 
 if __name__ == '__main__':
