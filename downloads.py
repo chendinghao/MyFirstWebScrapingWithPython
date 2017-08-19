@@ -1,7 +1,7 @@
 # -*- coding = UTF-8 -*-
 # author: Howard
 # num_retries 重试次数       user_agent 用户代理    proxy 也是代理
-import urllib2  # 利用不同协议获取url的能力 
+import urllib2  # 利用不同协议获取url的能力,和
 import urlparse # urlparse 主要把 url 拆分成六部分，并以元组的方式返回
 
 def download1(url):
